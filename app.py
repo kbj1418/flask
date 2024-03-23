@@ -18,7 +18,7 @@ def index():
     cursor.execute("SELECT * FROM tasks")
     tasks = cursor.fetchall()
     connection.close()
-    return render_template('web.html', tasks=tasks)
+    return render_template('index.html', tasks=tasks)
 
 @app.route('/s', methods=['POST'])
 def add_ask():
